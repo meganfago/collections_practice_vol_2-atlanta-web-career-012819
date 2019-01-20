@@ -33,3 +33,4 @@ def merge_data(keys, data)
     then merged << i.merge(value) end}}
   merged
 end
+

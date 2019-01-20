@@ -26,3 +26,10 @@ array.uniq.each {|i| count = 0
    i[:count] = count}
 end
 
+def merge_data(keys, data)
+  merged = []
+  keys.each {|i| data.first.map {|key,value|
+  if i.values[0] == key
+    then merged << i.merge(value) end}}
+  merged
+end

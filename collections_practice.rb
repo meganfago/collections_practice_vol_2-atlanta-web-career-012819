@@ -37,3 +37,10 @@ end
 def find_cool(cool)
     cool.select {|x| x.any? {|key,value| value == "cool"}} 
 end
+
+def organize_schools(schools)
+    locations_hash = {}
+    schools.collect {|key,value| 
+    locations_hash[value[:location]] = []}
+    locations_hash.each {|key,value| schools.each {|k1,v1| if key == v1[:location] then value << k1  end}}
+end
